@@ -21,7 +21,6 @@ jobs:
           mkdir -p ./output-folder
           unzip mydata.zip -d ./output-folder
           cd ./output-folder
-          ls NETReactorSlayer.CLI
-          # chmod +x *
-          # ./output-folder/NETReactorSlayer.CLI -h
+          chmod +x *
+          NETReactorSlayer -h
           # -d chỉ định thư mục đích để giải nén
