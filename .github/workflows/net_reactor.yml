@@ -22,5 +22,5 @@ jobs:
           unzip mydata.zip -d ./output-folder
           cd ./output-folder
           chmod +x *
-          NETReactorSlayer.CLI -h
+          ./output-folder/NETReactorSlayer.CLI -h
           # -d chỉ định thư mục đích để giải nén
