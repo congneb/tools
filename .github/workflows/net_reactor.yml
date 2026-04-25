@@ -2,13 +2,14 @@ name: Protect DLL with .NET Reactor (Windows)
 
 on:
   workflow_dispatch: # Chạy thủ công
+  push:
   
 jobs:
   download-and-extract:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      # - name: Checkout code
+      #   uses: actions/checkout@v4
 
       - name: Download file zip
         run: |
@@ -19,5 +20,7 @@ jobs:
         run: |
           mkdir -p ./output-folder
           unzip mydata.zip -d ./output-folder
-          ls ./output-folder
+          cd ./output-folder
+          chmod +x *
+          NETReactorSlayer.CLI -h
           # -d chỉ định thư mục đích để giải nén
