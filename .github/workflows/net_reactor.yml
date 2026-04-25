@@ -8,8 +8,8 @@ jobs:
   download-and-extract:
     runs-on: ubuntu-latest
     steps:
-      # - name: Checkout code
-      #   uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Download file zip
         run: |
@@ -22,5 +22,5 @@ jobs:
           unzip mydata.zip -d ./output-folder
           cd ./output-folder
           chmod +x *
-          NETReactorSlayer -h
+          NETReactorSlayer.CLI -h
           # -d chỉ định thư mục đích để giải nén
